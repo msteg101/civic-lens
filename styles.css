@@ -211,6 +211,10 @@ form input[type="checkbox"] {
   width: 15px;
   padding-bottom: 20px;
 }
+footer {
+  background-color: var(--blue-bulletin);
+  color: var(--watchdog-white);
+}
 /* ///ADD/// Global Text Styles */
 h1 {
   font-size: 1.5rem;
