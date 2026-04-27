@@ -100,21 +100,54 @@ body.dark-mode {
   transform: translateY(0%);
 }
 
-/* ///ADD/// Navigation Styles */
-nav ul {
-  display: grid;
-  grid-template-columns:repeat(4, 1fr);
+.mobile-nav {  
+  position: relative;
+  overflow: visible;
 }
-nav a, nav h2 {
-  color: var(--watchdog-white);
-  background-color: var(--news-flash);
+.menu-button {  
+  display: block;  
+  width: 100%;
+  background: var(--news-flash);  
+  color: var(--watchdog-white);  
+  padding: 16px;  
+  cursor: pointer;  
+  text-align: center;
+  font-weight: bold;
+  width: 95%;
+  border: 1px solid var(--news-flash);
   font-family: var(--font-body);
-  padding: 15px;
-  text-decoration: none;
-  text-transform: uppercase;
 }
-nav a:hover, nav h2:hover {
-  background-color: var(--truth-text);
+.menu { 
+  position:absolute;  
+  top: 100%;  
+  left: 0;
+  width: 100%;
+  z-index: 9999; 
+  list-style: none;  
+  margin: 0;  
+  padding: 0;  
+  display: none;  
+  background: var(--news-flash);
+  border: 1px solid var(--blue-bulletin);
+  font-family: var(--font-body);
+}
+.menu li a {  
+  font-family: var(--font-body);
+  display: block;  
+  padding: 10px;  
+  color: var(--watchdog-white);  text-decoration: none;
+  border-top: 1px solid var(--blue-bulletin);
+}
+
+#menu-toggle:checked + .menu-button + .menu {  
+  display: block;
+  
+}
+.menu li a:hover {  
+  background: var(--blue-bulletin);
+}
+.menu-button:hover {  
+  background: var(--blue-bulletin);
 }
 /* ///ADD/// Global Layout Styles */
 header {
@@ -128,6 +161,55 @@ header {
   color: var(--truth-text);
   box-shadow: var(--shadow);
   border: 1px solid var(--truth-text);
+}
+.tagline {
+  font-family: var(--font-heading);
+  color: var(--truth-text);
+  font-size: 1rem;
+  font-weight: bold;
+}
+.breaking {
+  background-color: var(--news-flash);
+  color: var(--watchdog-white);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  padding: 10px;
+  border: 1px solid var(--blue-bulletin);
+  margin: 5px;
+}
+form {
+  display: block;
+  background-color: var(--news-flash);
+  color: var(--watchdog-white);
+  border: 1px solid var(--blue-bulletin);
+  padding: 20px;
+}
+fieldset {
+  border: 1px solid var(--blue-bulletin);
+  padding: 0;
+  margin: 10px;
+  color: var(--watchdog-white);
+}
+form input[type="text"], form input[type="tel"] {
+  padding: 10px;
+  border: 1px solid var(--blue-bulletin);
+  margin-right: 10px;
+  width: 95%;
+  margin-bottom: 20px;
+}
+form button {
+  background-color: var(--blue-bulletin);
+  color: var(--watchdog-whiteh);
+  padding: 10px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 95%;
+}
+form input[type="checkbox"] {
+  margin-right: 10px;
+  height: 15px;
+  width: 15px;
+  padding-bottom: 20px;
 }
 /* ///ADD/// Global Text Styles */
 h1 {
