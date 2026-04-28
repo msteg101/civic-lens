@@ -140,10 +140,10 @@ body.dark-mode {
   border-top: 1px solid var(--blue-bulletin);
 }
 
-#menu-toggle:checked + .menu-button + .menu {  
+/*#menu-toggle:checked + .menu-button + .menu {  
   display: block;
   
-}
+}*/
 .menu li a:hover {  
   background: var(--blue-bulletin);
 }
@@ -168,6 +168,10 @@ header {
   border: 1px solid var(--truth-text);
   margin: 8px;
   padding: 20px;
+}
+.featured:hover {
+  transform: var(--transition);
+  cursor: grab;
 }
 .tagline {
   font-family: var(--font-heading);
@@ -216,11 +220,13 @@ form input[type="text"], form input[type="tel"] {
 }
 form button {
   background-color: var(--blue-bulletin);
-  color: var(--watchdog-whiteh);
+  color: var(--watchdog-white);
   padding: 10px 20px;
   cursor: pointer;
   text-transform: uppercase;
   width: 95%;
+  margin: 0 auto;
+  display: block;
 }
 form input[type="checkbox"] {
   margin-right: 10px;
@@ -286,24 +292,55 @@ h3 {
 }
 /* ///ADD/// medium styles 620px */
 @media screen and (min-width: 620px) {
-  .blocks {
+  .blocks, .blocks2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  .form-group {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
+  form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+fieldset {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 1rem;
+}
+fieldset legend {
+  grid-column: span 2;
+}
+fieldset,
+button {
+  grid-column: span 2;
+}
 }
 
 /* ///ADD/// large styles 920px */
 @media screen and (min-width: 920px) {
-  
+  .blocks2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* ///ADD/// x-large styles 1024px */
 @media screen and (min-width: 1024px) {
-  
+  .blocks2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  fieldset {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem 1rem;
+}
+fieldset legend {
+  grid-column: span 2;
+}
 }
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
@@ -319,14 +356,19 @@ h3 {
     color: var(--watchdog-white);
   }
 }
+@media (prefers-reduced-motion: reduce) {
+  body {
+    transition: none;
+  }
+}
 
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
-@supports (selector(:has(#menu-toggle:checked))) {
+@supports (selector(.mobile-nav:has(#menu-toggle:checked))) {
   .menu {
     display: none;
   }
-  #menu-toggle:checked + .menu-button + .menu {
+
+  .mobile-nav:has(#menu-toggle:checked) .menu {
     display: block;
   }
-
 }
