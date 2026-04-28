@@ -150,6 +150,7 @@ body.dark-mode {
   background: var(--blue-bulletin);
 }
 /* ///ADD/// Global Layout Styles */
+
 header {
   background-color: var(--blue-bulletin);
   color: var(--watchdog-white);
@@ -161,12 +162,12 @@ header {
   color: var(--truth-text);
   box-shadow: var(--shadow);
   border: 1px solid var(--truth-text);
+  margin: 10px auto;
+  padding: 20px;
 }
 .tagline {
   font-family: var(--font-heading);
-  color: var(--truth-text);
   font-size: 1rem;
-  font-weight: bold;
 }
 .breaking {
   background-color: var(--news-flash);
@@ -189,6 +190,10 @@ fieldset {
   padding: 0;
   margin: 10px;
   color: var(--watchdog-white);
+}
+fieldset legend {
+  text-transform: uppercase;
+  font-weight: 500;
 }
 form input[type="text"], form input[type="tel"] {
   padding: 10px;
@@ -214,31 +219,66 @@ form input[type="checkbox"] {
 footer {
   background-color: var(--blue-bulletin);
   color: var(--watchdog-white);
+  padding: 20px;
+}
+footer h2 {
+  padding-bottom: 10px;
+}
+footer a {
+  display: inline-block;
+  color: var(--watchdog-white);
+  text-decoration: none;
+  background-color: var(--news-flash);
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 5px;
+}
+footer p {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+video {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 10px auto;
 }
 /* ///ADD/// Global Text Styles */
+p {
+  line-height: 1.15;
+  font-weight: 300;
+}
 h1 {
-  font-size: 1.5rem;
-  font: var(--font-heading);
+  font-size: 3rem;
   color: var(--watchdog-white);
+  font-weight: 300;
 }
 h2 {
   font-size: 1.25rem;
   font-family: var(--font-heading);
-  color: var(--truth-text);
+  font-weight: 300;
 }
 h3 {
   font-size: 1.1rem;
   font-family: var(--font-heading);
-  color: var(--truth-text);
+  font-weight: 300;
 }
 /* ///ADD/// medium styles 620px */
-
+@media screen and (min-width: 620px) {
+  
+}
 
 /* ///ADD/// large styles 920px */
-
+@media screen and (min-width: 920px) {
+  
+}
 
 /* ///ADD/// x-large styles 1024px */
-
+@media screen and (min-width: 1024px) {
+  
+}
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
 
