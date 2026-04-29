@@ -367,9 +367,9 @@ button {
   }
   .menu li a {
     display: flex;
+    gap: 1rem;
     border: none;
     padding: 10px 20px;
-    gap: 1rem;
     background-color: var(--news-flash);
   }
   .menu li a:hover {
