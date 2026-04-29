@@ -356,7 +356,6 @@ button {
   .menu {
     display: flex !important;
     flex-direction: row;
-    gap: 1rem;
     position: static;
     width: 100%;
     border: none;
@@ -382,7 +381,7 @@ button {
   fieldset {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem 1rem;
+  gap: 0.5rem;
 }
 fieldset legend {
   grid-column: span 2;
