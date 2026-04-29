@@ -354,7 +354,10 @@ button {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-  
+  nav {
+    display: flex;
+    gap: 1rem;
+  }
   .menu {
     display: flex !important;
     flex-direction: row;
