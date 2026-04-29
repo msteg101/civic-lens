@@ -278,9 +278,9 @@ footer a {
 }
 footer a:hover {
   border: 1px solid var(--news-flash);
-    padding: 10px 20px;
-    background-color: var(--blue-bulletin);
-    transition: var(--transition);
+  padding: 10px 20px;
+  background-color: var(--blue-bulletin);
+  transition: var(--transition);
 }
 footer p {
   margin: 0 auto;
