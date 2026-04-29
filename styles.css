@@ -136,6 +136,7 @@ body.dark-mode {
 }
 .menu li a {  
   font-family: var(--font-body);
+  gap: 1rem;
   display: block;  
   padding: 10px;  
   color: var(--watchdog-white);  text-decoration: none;
