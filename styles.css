@@ -276,9 +276,10 @@ footer a {
   margin: 5px;
 }
 footer a:hover {
-  background-color: var(--blue-bulletin);
   border: 1px solid var(--news-flash);
-  transform: var(--transition);
+    padding: 10px 20px;
+    background-color: var(--blue-bulletin);
+    transition: var(--transition);
 }
 footer p {
   margin: 0 auto;
@@ -357,6 +358,7 @@ button {
     display: flex !important;
     flex-direction: row;
     position: static;
+    gap: 1rem;
     width: 100%;
     border: none;
     background: none;
@@ -366,6 +368,12 @@ button {
     border: none;
     padding: 10px 20px;
     background-color: var(--news-flash);
+  }
+  .menu li a:hover {
+    border: 1px solid var(--news-flash);
+    padding: 10px 20px;
+    background-color: var(--blue-bulletin);
+    transition: var(--transition);
   }
   .menu-button {
     display: none;
